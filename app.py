@@ -89,7 +89,7 @@ def main():
         st.markdown(css, unsafe_allow_html=True)
 
     # Set the background image
-    # set_background("background_image.png")
+    set_background("background_image.png")
 
     st.header("𝑪𝑯𝑨𝑻 𝑾𝒊𝒕𝒉 𝒀𝒐𝒖𝒓 𝑷𝑫𝑭'𝒔 💬📄")
 
