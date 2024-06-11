@@ -89,17 +89,18 @@ def main():
         st.markdown(css, unsafe_allow_html=True)
 
     # Set the background image
-    set_background("background_image.png")
+    # set_background("background_image.png")
 
-    st.header("Podcast With Your PDF's")
+    st.header("𝑪𝑯𝑨𝑻 𝑾𝒊𝒕𝒉 𝒀𝒐𝒖𝒓 𝑷𝑫𝑭'𝒔 💬📄")
 
-    user_question = st.text_input("Ask a Question from the PDF Files")
+    user_question = st.text_input("Ask any Question from the PDF Files")
 
     if user_question:
         user_input(user_question)
     
     with st.sidebar:
         st.title("Menu:")
+        st.image("sidebar_image.png", use_column_width=True)
         pdf_docs = st.file_uploader("Upload Your PDF Files and Click on the Submit & Process Button", accept_multiple_files=True, type='pdf')
         if st.button("Submit & Process") :
             with st.spinner("Processing..."):
@@ -107,6 +108,7 @@ def main():
                 text_chunks = get_text_chunks(raw_text)
                 get_vector_store(text_chunks)
                 st.success("Done")
+        st.image("sidebar_image1.png", use_column_width=True)
 
 if __name__ == "__main__":
     main()
